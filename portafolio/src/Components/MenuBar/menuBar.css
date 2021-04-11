@@ -1,0 +1,46 @@
+.h-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: calc(1rem + 0.2vw);
+    margin-right: 4vw;
+}
+
+.h-link {
+    padding: 5px;
+    margin: 5px;
+    color: var(--colorV);
+    align-self: flex-end;
+}
+
+.h-link:hover {
+    color: var(--colorI);
+    cursor: pointer;
+}
+
+#btnHam {
+    background-image: url('../../Media/icons/menuHam1.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+
+#btnHam:hover {
+    cursor: pointer;
+}
+
+.h-linkDevice {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: calc(1rem - 0.1vw);
+    position: absolute;
+    top: 55px;
+    right: 0;
+    z-index: 9;
+    background-color: rgba(255, 255, 255, 0.1);
+}
