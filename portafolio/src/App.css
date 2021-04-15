@@ -1,26 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
-  --colorI: #f2630d;
+  --colorI: #ff7f2f;
   --colorII: #3d4249;
-  --colorIII: #6f8191;
-  --colorIV: #cbd2d9;
+  --colorIII: #cecece;
+  --colorIV: #b6b6b6;
   --colorV:#f5f5f5;
+  --colorVI: #282828 ;
+  --colorVII: #f0f0f0;
 }
 
 html, body, #root{
   margin: 0;
   padding: 0; 
   min-height: 100vh;
-  width:100%;
   display:block;
   font-family: 'Montserrat', 'EB Garamond','Libre Baskerville', serif;
-  background: var(--colorII);
+  background-color: var(--colorV);
+  background-image: url('./Media/photos/back1-landing.jpg');
+  background-position:  right;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .App {
   text-align: center;
   height: 100%;
+  width: 100%;
   box-sizing: border-box;
   position: relative;
 }
+
+
+.App::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+

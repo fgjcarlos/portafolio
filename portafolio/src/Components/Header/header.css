@@ -8,20 +8,45 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    min-height: 50px;
+    height: 60px;
     z-index: 10;
-    padding: 10px;
+    padding: 30px;
     box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.8);
+    -webkit-transition: background-color 800ms ease;
+    -ms-transition: background-color 800ms ease;
+    transition: background-color 800ms ease;
+}
+
+.h-container a {
+    text-decoration: none;
 }
 
 #h-home{
     font-family: 'Monoton', cursive, serif;
     text-align: left;
     font-size: calc(1rem + 1vw);
-    color: var(--colorI);
+    color: var(--colorV);
     margin-left: 4vw;
 }
 
 #h-home:hover{
     transform: scale(1.1);
+    color: var(--colorI);
+}
+
+.h-landing{
+    background-color: transparent;
+}
+
+@media screen and (max-width: 767px){
+    .h-container{
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .h-container{
+        height: 50px;
+    }
 }

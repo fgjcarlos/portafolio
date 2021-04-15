@@ -1,16 +1,25 @@
 import {useState} from 'react';
+import {NavLink} from 'react-router-dom';
+import { useSelector} from 'react-redux';
 import './menuBar.css';
 
-export const MenuBarDesktop = ({linksDevide}) => {
+export const MenuBarDesktop = ({linkActive}) => {
 
-    const classMenuBar = linksDevide ? 'h-links' :`h-linkDevice`;
+    const nameLinks = [{text:'Sobre mí', path:'/about'},{text:'Portafolio', path:'/portfolio'},{text:'Blog', path:'/blog'}, {text:'Contacto', path:'/contact'}];
+    const isTypeHeader = useSelector(s => s.header);
+
+    const setBackgroudLinks =  (isTypeHeader === 'h-landing' ? 'links-land' : '')
 
     return (
-        <div className={classMenuBar}>
-            <div className="h-link">Sobre mí</div>
-            <div className="h-link">Portafolio</div>
-            <div className="h-link">Blog</div>
-            <div className="h-link">Contacto</div>
+        <div className={'h-links ' + setBackgroudLinks}>
+            {
+            nameLinks.map(link => 
+                <div className="h-link" key={link}>
+                    <NavLink onClick={linkActive} to={link.path}>
+                      {link.text}
+                    </NavLink>
+                </div>)
+            } 
         </div>
     );
 }
@@ -26,9 +35,11 @@ export const MenuBarDevice = () => {
     return (
 
         <div className="h-menuDevice">
-            <div id="btnHam" onClick={handleShowMenuHam}></div>
-            {showMenu && <MenuBarDesktop />}
-        </div>
+            <div id="btnHam"
+                onClick={handleShowMenuHam}></div>
+            {
+            showMenu && <MenuBarDesktop linkActive={handleShowMenuHam}/>
+        } </div>
 
     );
 

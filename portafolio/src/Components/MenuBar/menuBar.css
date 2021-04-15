@@ -1,19 +1,21 @@
 .h-links {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     font-size: calc(1rem + 0.2vw);
-    margin-right: 4vw;
+    /* margin-right: 4vw; */
+    top: 60px;
 }
 
-.h-link {
+.h-link, .h-link > a  {
     padding: 5px;
     margin: 5px;
     color: var(--colorV);
     align-self: flex-end;
 }
 
-.h-link:hover {
+.h-link > a:hover {
     color: var(--colorI);
     cursor: pointer;
 }
@@ -31,16 +33,25 @@
     cursor: pointer;
 }
 
-.h-linkDevice {
-    width: 100%;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    font-size: calc(1rem - 0.1vw);
-    position: absolute;
-    top: 55px;
-    right: 0;
-    z-index: 9;
-    background-color: rgba(255, 255, 255, 0.1);
+@media screen and (max-width: 767px){
+    .h-links{
+        width: 100%;
+        margin: 0;
+        font-size: calc(1rem - 0.1vw);
+        position: absolute;
+        top: 40px;
+        right: 0;
+        z-index: 9;
+        background-color: rgba(61, 66, 73, 0.9);
+    }
+
+    .links-land{
+        background-color: rgba(  203, 210, 217  , 0.2); 
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .h-links{
+        top: 50px;
+    }
 }
