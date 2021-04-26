@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 :root{
   --colorI: #ff7f2f;
@@ -12,18 +15,18 @@
 
 
 html, body, #root{
+  height: 100vh;
   margin: 0;
   padding: 0; 
-  height:100%;
   display:block;
-  font-family: 'Montserrat', 'EB Garamond','Libre Baskerville', serif;
+  font-family: 'Open Sans', 'Roboto' , 'Montserrat', 'EB Garamond','Libre Baskerville', serif;
  }
 
 .App {
   text-align: center;
   box-sizing: border-box;
   position: relative;
-  overflow: auto;
+  /* overflow: auto; */
   background-color: var(--colorV);
   background-image: url('./Media/photos/back1-landing.jpg');
   background-position:  right;
@@ -31,8 +34,10 @@ html, body, #root{
   background-size: cover;
   min-height:100%; 
   position:relative; 
-  padding-bottom: 15vh;
-  font-size: 0.9rem;
+  /* padding-bottom: 15vh; */
+  font-size: 1rem;
+  padding-bottom: 20vh;
+
 }
 
 .App::before {
@@ -46,6 +51,49 @@ html, body, #root{
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.App h1, h2, h3, h4 {
+  font-family: 'Bangers' , 'Montserrat', 'EB Garamond','Libre Baskerville', serif;
+
+}
+
 .notFooter {
   padding: 0px;
+}
+
+
+
+
+@media screen  and (max-height: 360px) and (orientation: landscape){
+.App{
+  padding-bottom: 95vh;
+
+}
+
+}
+
+
+@media screen and (min-height: 360px)  and (max-height: 640px) and (orientation: landscape){
+  .App{
+    padding-bottom: 90vh;
+  
+  }
+  
+
+}
+
+@media screen and (max-height: 670px) and (orientation: portrait){
+
+  .App{
+    padding-bottom: 60vh;
+  
+  }
+  
+}
+
+
+@media screen and (min-height: 670px)  and (max-height: 900px) and (orientation: portrait){
+  .App{
+    padding-bottom: 50vh;
+  
+  }
 }

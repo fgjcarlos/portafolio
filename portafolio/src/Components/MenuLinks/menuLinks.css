@@ -10,3 +10,13 @@
     color: var(--colorI);
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 767px){
+
+    .h-link{
+        font-size: 1rem;
+        align-self: center;
+    }
+
+}

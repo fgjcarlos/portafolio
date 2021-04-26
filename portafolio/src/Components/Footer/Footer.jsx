@@ -8,38 +8,41 @@ const Footer = () => {
 
     const listIRRSS = [iconLinkedin, iconGitHub, iconGitLab];
 
-    return (<div className="f-container">
-        <div className="f-links"> 
-    
-        <Linkfgjcarlos customStyle={'footer-link'} />
-        
-        <MenuLinks />
+    return (
+        <div className="f-container">
+            <div className="f-links">
 
-            <div className="f-linksContainers"> {
-                listIRRSS.map(rrss => <div id="f-rrss">
+                <Linkfgjcarlos customStyle={'footer-link'}/>
 
-                    <img src={
-                            rrss.icon
-                        }
-                        alt={
-                            rrss.alt
-                        }
-                        key={
-                            rrss.alt
-                        }/>
+                <MenuLinks/>
 
-                </div>)
-            } </div>
+                <div className="f-linksContainers">
+                    {
+                    listIRRSS.map(rrss => <div id="f-rrss">
+
+                        <img src={
+                                rrss.icon
+                            }
+                            alt={
+                                rrss.alt
+                            }
+                            key={
+                                rrss.alt
+                            }/>
+
+                    </div>)
+                } </div>
 
 
+            </div>
+            <div className="f-nameDescription">
+
+                <span>Carlos Fontán - Desarrollador web</span>
+                <span id="f-credit">© Creditos de la web</span>
+
+            </div>
         </div>
-        <div className="f-nameDescription">
-
-            <span>Carlos Fontán - Desarrollador web</span>
-            <span id="f-credit">© Creditos de la web</span>
-
-        </div>
-    </div>);
+    );
 }
 
 
