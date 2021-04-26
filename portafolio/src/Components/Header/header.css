@@ -22,19 +22,6 @@
     text-decoration: none;
 }
 
-#h-home{
-    font-family: 'Monoton', cursive, serif;
-    text-align: left;
-    font-size: calc(1rem + 1vw);
-    color: var(--colorV);
-    margin-left: 4vw;
-}
-
-#h-home:hover{
-    transform: scale(1.1);
-    color: var(--colorI);
-}
-
 .h-landing{
     background-color: transparent;
 }

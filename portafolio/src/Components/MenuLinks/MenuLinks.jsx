@@ -5,15 +5,19 @@ const MenuLinks = ({linkActive}) => {
 
     const nameLinks = [
         {
+            id: 1,
             text: 'Sobre mí',
             path: '/about'
         }, {
+            id: 2,
             text: 'Portafolio',
             path: '/portfolio'
         }, {
+            id: 3,
             text: 'Blog',
             path: '/blog'
         }, {
+            id: 4,
             text: 'Contacto',
             path: '/contact'
         }
@@ -21,13 +25,13 @@ const MenuLinks = ({linkActive}) => {
 
     return(
         <>
-{        nameLinks.map(link => <div className="h-link"
-            key={link}>
+{        nameLinks.map(({text, path, id}) => <div className="h-link"
+            key={id}>
             <NavLink onClick={linkActive}
                 to={
-                    link.path
+                    path
             }> {
-                link.text
+                text
             } </NavLink>
         </div>)}
         </>

@@ -1,6 +1,6 @@
 import {useMediaQuery} from 'react-responsive';
-import {NavLink} from 'react-router-dom';
 import {MenuBarDesktop, MenuBarDevice} from '../MenuBar/MenuBar';
+import Linkfgjcarlos from '../Linkfgjcarlos/Linkfgjcarlos';
 import { useSelector} from 'react-redux';
 import './header.css';
 
@@ -11,11 +11,8 @@ const Header = () => {
 
     return (
         <div className={"h-container " + isTypeHeader}>
-            <div>
-                <NavLink to="/">
-                    <div id="h-home" className="h-link">FGJCARLOS</div>
-                </NavLink>
-            </div>
+
+            <Linkfgjcarlos customStyle={''}/>
 
             {isDesktopOrLaptop ? <MenuBarDesktop/> : <MenuBarDevice />} 
         </div>

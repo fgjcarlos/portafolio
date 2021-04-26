@@ -23,8 +23,8 @@ const Portfolio = () => { // set type page, for header and footer
 
 
     const linksCard = {
-        src: iconGitHub,
-        git: 'gitHub',
+        src: iconGitHub.icon,
+        git: iconGitHub.alt,
         play: null
     }
 

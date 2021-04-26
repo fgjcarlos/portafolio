@@ -32,8 +32,19 @@ html, body, #root{
   min-height:100%; 
   position:relative; 
   padding-bottom: 15vh;
+  font-size: 0.9rem;
 }
 
+.App::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
 .notFooter {
   padding: 0px;

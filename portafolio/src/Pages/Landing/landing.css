@@ -18,7 +18,7 @@
     position: relative;
 }
 
-.lan-container::before {
+/* .lan-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -26,9 +26,9 @@
     right: 0;
     bottom: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
   }
-  
+   */
 
 .lan-common{
     position: absolute;
@@ -54,11 +54,18 @@
     flex-wrap: wrap;
     flex-direction: column;
     width: 50%;
-    font-size: calc(1rem + 2.5vw);
+    font-size: 3rem;
     font-family: Typewriter, 'Libre Baskerville','Montserrat', 'EB Garamond', serif;
     color: var(--colorV);
     right: 50vw;
     left: 50vw;
     z-index: 2;
+}
+
+
+@media screen and (max-width: 767px){
+    .lan-msg{
+        font-size: 2rem;
+    }
 
 }

@@ -3,6 +3,7 @@
     margin: 5px;
     color: var(--colorV);
     align-self: flex-end;
+    text-decoration: none;
 }
 
 .h-link > a:hover {

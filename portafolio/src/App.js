@@ -12,32 +12,36 @@ function App() {
     const isLandingPage = useSelector(s => s.header);
     const showFooter = (isLandingPage === '') ? true : false;
 
-    return (<div className={
-        "App " + (
-        isLandingPage ? 'notFooter' : ''
-    )
-    }>
+    return (
 
-        <Header/>
 
-        <Switch>
-            <Route path="/" exact>
-                <Landing/>
-            </Route>
+        <div className={
+            "App " + (
+            isLandingPage ? 'notFooter' : ''
+        )
+        }>
 
-            <Route path="/about" exact>
-                <About/>
-            </Route>
+            <Header/>
 
-            <Route path="/portfolio" exact>
-                <Portfolio/>
-            </Route>
+            <Switch>
+                <Route path="/" exact>
+                    <Landing/>
+                </Route>
 
-        </Switch>
+                <Route path="/about" exact>
+                    <About/>
+                </Route>
 
-        {
-        showFooter && <Footer/>
-    } </div>);
+                <Route path="/portfolio" exact>
+                    <Portfolio/>
+                </Route>
+
+            </Switch>
+
+            {
+            showFooter && <Footer/>
+        } </div>
+    );
 }
 
 export default App;

@@ -1,0 +1,35 @@
+.linkHome{
+    font-family: 'Monoton', cursive, serif;
+    text-align: left;
+    font-size: 1.6rem;
+    color: var(--colorV);
+    margin-left: 4vw;
+    text-decoration: none;
+}
+
+.linkHome:hover{
+    transform: scale(1.1);
+    color: var(--colorI);
+}
+
+
+.footer-link {
+    font-size: 1.3rem;
+}
+
+
+
+@media screen and (max-width: 767px){
+
+
+    .linkHome{
+    font-size: 1.4rem;
+
+    }
+
+    .footer-link {
+        font-size: 1.1rem;
+        }
+
+}
+
