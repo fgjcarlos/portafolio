@@ -1,0 +1,44 @@
+.card-container{
+    width: 300px;
+    height: 450px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+#card-img {
+    overflow: hidden;
+}
+
+#card-img > img{
+    width: 100%;
+}
+
+#card-img > img:hover{
+    transform: scale(1.05);
+}
+
+
+#card-body {
+    padding: 5px;
+}
+
+#card-body > h5{
+    text-transform: uppercase;
+    margin: 0px;
+    padding: 5px;
+}
+
+#card-body > p {
+    text-align: left;
+    padding: 5px;
+    margin: 0px;
+
+}
+
+
+#c-link-git > img {
+    width: 50px;
+    /* height: 100%; */
+}

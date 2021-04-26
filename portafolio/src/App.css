@@ -10,36 +10,31 @@
   --colorVII: #f0f0f0;
 }
 
+
 html, body, #root{
   margin: 0;
   padding: 0; 
-  min-height: 100vh;
+  height:100%;
   display:block;
   font-family: 'Montserrat', 'EB Garamond','Libre Baskerville', serif;
+ }
+
+.App {
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  overflow: auto;
   background-color: var(--colorV);
   background-image: url('./Media/photos/back1-landing.jpg');
   background-position:  right;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.App {
-  text-align: center;
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  position: relative;
+  min-height:100%; 
+  position:relative; 
+  padding-bottom: 15vh;
 }
 
 
-.App::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.3);
+.notFooter {
+  padding: 0px;
 }
-

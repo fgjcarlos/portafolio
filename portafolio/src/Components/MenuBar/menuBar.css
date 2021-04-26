@@ -8,18 +8,6 @@
     top: 60px;
 }
 
-.h-link, .h-link > a  {
-    padding: 5px;
-    margin: 5px;
-    color: var(--colorV);
-    align-self: flex-end;
-}
-
-.h-link > a:hover {
-    color: var(--colorI);
-    cursor: pointer;
-}
-
 #btnHam {
     background-image: url('../../Media/icons/menuHam1.svg');
     background-position: center;
@@ -39,7 +27,7 @@
         margin: 0;
         font-size: calc(1rem - 0.1vw);
         position: absolute;
-        top: 40px;
+        top: 60px;
         right: 0;
         z-index: 9;
         background-color: rgba(61, 66, 73, 0.9);
@@ -52,6 +40,6 @@
 
 @media screen and (max-width: 1024px){
     .h-links{
-        top: 50px;
+        top: 60px;
     }
 }

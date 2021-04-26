@@ -1,6 +1,4 @@
 .ab-container{
-    height: 100%;
-    width: 100%;
     padding: 5vw;
     padding-top: 100px;
     box-sizing: border-box;
@@ -10,10 +8,14 @@
 }
 
 .ab-jumbotron{
+    height: 100%;
+    width: 80%;
+    margin: 0px auto 0px auto;
     border-radius: 10px;
     padding: 30px;
     background-color: var(--colorVII);
     box-shadow: 0px 0px 2px 1px var(--colorIII);
+
 }
 
 .ab-aboutMe{
@@ -21,22 +23,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
-
-.ab-skills{
-
-}
-
-.ab-listSkils{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.ab-iconSkill {
-    width: 100px;
-    height: 100px;
 }
 
 .skill-toolTip{
@@ -58,7 +44,7 @@
 .ab-description{
     width: 100%;
     text-align: left;
-    font-size: calc(1rem + 0.1vw);
+    font-size: 1rem;
     padding: 20px;
     box-sizing: border-box;
 }
