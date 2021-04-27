@@ -15,7 +15,7 @@
 
 
 html, body, #root{
-  height: 100vh;
+  height: 100%;
   margin: 0;
   padding: 0; 
   display:block;
@@ -23,20 +23,40 @@ html, body, #root{
  }
 
 .App {
+  /* text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  background-color: var(--colorV);
+  background-image: url('./Media/photos/back1-landing.jpg');
+  background-position:  right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height:85vh; 
+  position:relative; 
+  font-size: 1rem;
+  display: flex;
+  justify-content: stretch;
+  flex-direction: column; */
+
+/*  */
+
   text-align: center;
   box-sizing: border-box;
   position: relative;
   /* overflow: auto; */
   background-color: var(--colorV);
   background-image: url('./Media/photos/back1-landing.jpg');
-  background-position:  right;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height:100%; 
-  position:relative; 
-  /* padding-bottom: 15vh; */
+  min-height: 100vh;
+  position: relative;
   font-size: 1rem;
-  padding-bottom: 15vh;
+  /* padding-bottom: 15vh; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 60px;
 
 }
 
@@ -56,7 +76,12 @@ html, body, #root{
 
 }
 
+.notFooter {
+  padding: 0px;
+}
 
+
+/* 
 
 @media screen  and (max-height: 360px) and (orientation: landscape){
 .App{
@@ -93,9 +118,4 @@ html, body, #root{
     padding-bottom: 50vh;
   
   }
-}
-
-
-.notFooter {
-  padding: 0px;
-}
+} */

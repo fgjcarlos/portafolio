@@ -1,7 +1,7 @@
 .p-container{
     z-index: 3;
     padding: 5vw;
-    padding-top: 100px;
+    /* padding-top: 100px; */
     box-sizing: border-box;
     z-index: 1;
     position: relative;

@@ -3,16 +3,16 @@
 .f-container{
     /* padding-top: 20px; */
     /* padding-bottom: 20px; */
-    height: 15vh;
+    min-height: 15vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     color:var(--colorVII);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: absolute;
+    /* position: absolute;
     bottom: 0px;
-    z-index: 4;
+    z-index: 4; */
     text-align: center;
     box-sizing: content-box;
 }
@@ -94,7 +94,7 @@
 }
 
 
-@media screen  and (max-height: 360px) and (orientation: landscape){
+/* @media screen  and (max-height: 360px) and (orientation: landscape){
 
     .f-container{
         height: 85vh;
@@ -122,5 +122,5 @@
     .f-container{
         height: 40vh;
     }
-}
+} */
 

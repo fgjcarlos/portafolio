@@ -11,7 +11,7 @@ const Landing = () => {
         <div className="lan-container">
             <div className="lan-msg lan-common">
                 <Typed strings={
-                        ['Hola, soy Carlos Fontán', 'Desarrollador web', '¡Bienvenid@!']
+                        ['¡Hola!', 'soy Carlos Fontán', 'Desarrollador web', '¡Bienvenid@!']
                     }
                     startDelay={300}
                     smartBackspace={true}
