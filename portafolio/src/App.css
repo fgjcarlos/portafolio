@@ -36,7 +36,7 @@ html, body, #root{
   position:relative; 
   /* padding-bottom: 15vh; */
   font-size: 1rem;
-  padding-bottom: 20vh;
+  padding-bottom: 15vh;
 
 }
 
@@ -55,11 +55,6 @@ html, body, #root{
   font-family: 'Bangers' , 'Montserrat', 'EB Garamond','Libre Baskerville', serif;
 
 }
-
-.notFooter {
-  padding: 0px;
-}
-
 
 
 
@@ -87,6 +82,8 @@ html, body, #root{
     padding-bottom: 60vh;
   
   }
+
+  
   
 }
 
@@ -96,4 +93,9 @@ html, body, #root{
     padding-bottom: 50vh;
   
   }
+}
+
+
+.notFooter {
+  padding: 0px;
 }
