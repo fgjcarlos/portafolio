@@ -23,27 +23,9 @@ html, body, #root{
  }
 
 .App {
-  /* text-align: center;
-  box-sizing: border-box;
-  position: relative;
-  background-color: var(--colorV);
-  background-image: url('./Media/photos/back1-landing.jpg');
-  background-position:  right;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height:85vh; 
-  position:relative; 
-  font-size: 1rem;
-  display: flex;
-  justify-content: stretch;
-  flex-direction: column; */
-
-/*  */
-
   text-align: center;
   box-sizing: border-box;
   position: relative;
-  /* overflow: auto; */
   background-color: var(--colorV);
   background-image: url('./Media/photos/back1-landing.jpg');
   background-position: right;
@@ -52,7 +34,6 @@ html, body, #root{
   min-height: 100vh;
   position: relative;
   font-size: 1rem;
-  /* padding-bottom: 15vh; */
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -79,43 +60,3 @@ html, body, #root{
 .notFooter {
   padding: 0px;
 }
-
-
-/* 
-
-@media screen  and (max-height: 360px) and (orientation: landscape){
-.App{
-  padding-bottom: 95vh;
-
-}
-
-}
-
-
-@media screen and (min-height: 360px)  and (max-height: 640px) and (orientation: landscape){
-  .App{
-    padding-bottom: 90vh;
-  
-  }
-  
-
-}
-
-@media screen and (max-height: 670px) and (orientation: portrait){
-
-  .App{
-    padding-bottom: 60vh;
-  
-  }
-
-  
-  
-}
-
-
-@media screen and (min-height: 670px)  and (max-height: 900px) and (orientation: portrait){
-  .App{
-    padding-bottom: 50vh;
-  
-  }
-} */
