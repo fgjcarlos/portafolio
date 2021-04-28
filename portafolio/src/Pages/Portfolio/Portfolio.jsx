@@ -31,6 +31,8 @@ const Portfolio = () => { // set type page, for header and footer
     return (<div className="p-container">
 
         <div className="ab-jumbotron">
+        <h1>Proyectos personales</h1>
+            
             <Card cardImg={logoCard}
                 cardBody={bodyCard}
                 cardLinks={linksCard}/>

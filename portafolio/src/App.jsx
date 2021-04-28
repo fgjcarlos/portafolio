@@ -19,7 +19,8 @@ function App() {
             "App " + (
             isLandingPage ? 'notFooter' : ''
         )
-        }>
+        }   
+        >
 
             <Header/>
 
@@ -34,6 +35,10 @@ function App() {
 
                 <Route path="/portfolio" exact>
                     <Portfolio/>
+                </Route>
+
+                <Route path="/blog" exact>
+                    <h1>blog</h1>
                 </Route>
 
             </Switch>

@@ -1,11 +1,15 @@
 .p-container{
     z-index: 3;
     padding: 5vw;
-    /* padding-top: 100px; */
     box-sizing: border-box;
     z-index: 1;
     position: relative;
 }
+
+.ab-jumbotron > h1 {
+    margin-top: 0px;
+}
+
 
 .p-card{
     border: 1px solid black;

@@ -5,19 +5,22 @@
     align-items: center;
     font-size: 1.1rem;
     top: 60px;
+    animation: showMenuHam 500ms ease;
 }
 
 #btnHam {
-    background-image: url('../../Media/icons/menuHam1.svg');
+    background-image: url('../../Media/icons/menuHam3.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 30px;
     height: 30px;
 }
 
 #btnHam:hover {
     cursor: pointer;
+    background-image: url('../../Media/icons/menuHam3Active.png');
+    animation: scaleIconActive 500ms ease;
 }
 
 @media screen and (max-width: 767px){
@@ -29,16 +32,34 @@
         top: 60px;
         right: 0;
         z-index: 9;
-        background-color: rgba(61, 66, 73, 0.9);
+        background-color: rgba(55, 59, 65, 0.95);
     }
 
     .links-land{
-        background-color: rgba(124, 124, 124, 0.4); 
+        background-color: rgba(92, 92, 92, 0.4); 
     }
 }
 
 @media screen and (max-width: 1024px){
     .h-links{
         top: 60px;
+    }
+}
+
+
+@keyframes showMenuHam {
+
+        from {left: 100%;}
+        to {left: 0%;}
+}
+
+@keyframes scaleIconActive {
+
+    from {
+        transform: scale(1.4);
+    }
+
+    to {
+        transform: scale(1);
     }
 }
