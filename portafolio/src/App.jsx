@@ -6,6 +6,7 @@ import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import Landing from "./Pages/Landing/Landing";
 import Portfolio from "./Pages/Portfolio/Portfolio";
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
 

@@ -1,0 +1,29 @@
+[
+    {
+        "image": "porfolioProyect.webp",
+        "id": "portfolio",
+        "title": "Portafolio",
+        "techs": ["React", "HTML", "CSS", "JS"],
+        "description": "Web personal, para compartir mis proyectos y aficiones",
+        "linkGit": "https://github.com/fgjcarlos/portafolio.git",
+        "linkDemo": "kk"
+    },
+    {
+        "image": "porfolioProyect.webp",
+        "id": "portfolio",
+        "title": "Portafolio",
+        "techs": ["React", "HTML", "CSS", "JS"],
+        "description": "Web personal, para compartir mis proyectos y aficiones",
+        "linkGit": "https://github.com/fgjcarlos/portafolio.git",
+        "linkDemo": "kk"
+    },
+    {
+        "image": "porfolioProyect.webp",
+        "id": "portfolio",
+        "title": "Portafolio",
+        "techs": ["React", "HTML", "CSS", "JS"],
+        "description": "Web personal, para compartir mis proyectos y aficiones",
+        "linkGit": "https://github.com/fgjcarlos/portafolio.git",
+        "linkDemo": "kk"
+    }
+]

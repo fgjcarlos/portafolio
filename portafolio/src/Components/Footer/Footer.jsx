@@ -1,5 +1,5 @@
 import './footer.css';
-import {iconLinkedin, iconGitHub, iconGitLab} from '../../services/iconsExport';
+import {iconLinkedin, iconGitHub, iconGitLab} from '../../container/iconsExport';
 import MenuLinks from '../MenuLinks/MenuLinks';
 import Linkfgjcarlos from '../Linkfgjcarlos/Linkfgjcarlos';
 

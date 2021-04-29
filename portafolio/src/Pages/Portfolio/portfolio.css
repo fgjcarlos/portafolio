@@ -4,12 +4,24 @@
     box-sizing: border-box;
     z-index: 1;
     position: relative;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
 }
 
 .ab-jumbotron > h1 {
     margin-top: 0px;
+    margin-bottom: 20px;
 }
 
+.ab-jumbotron .p-proyects {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+flex-wrap: wrap;
+align-items: center;
+}
 
 .p-card{
     border: 1px solid black;

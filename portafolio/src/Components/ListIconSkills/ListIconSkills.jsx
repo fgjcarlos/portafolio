@@ -8,7 +8,7 @@ import {
     iconCss3,
     iconNpm,
     iconGit
-} from '../../services/iconsExport';
+} from '../../container/iconsExport';
 
 
 const ListIconSkills = () => {
@@ -27,19 +27,19 @@ const ListIconSkills = () => {
 
 
     return (<div className="ab-listSkils"> {
-        listIconsSkills.map(skill => <div className="ab-iconSkill"> {/* <Tippy  key={skill.alt} animation={true} content={skill.alt} visible={visible && (activeToolTip === skill.alt)}> */}
+        listIconsSkills.map(({icon, alt}) => <div className="ab-iconSkill">
             <img src={
-                    skill.icon
+                    icon
                 }
                 alt={
-                    skill.alt
+                    alt
                 }
                 key={
-                    skill.alt
+                    alt
                 }
-                // onMouseEnter={() => show(skill.alt)}
-                // onMouseLeave={() => hide(skill.alt)}
-            /> {/* </Tippy> */} </div>)
+                title={alt}
+
+            />  </div>)
     } </div>);
 
 }

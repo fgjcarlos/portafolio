@@ -10,6 +10,8 @@ import logoLinkedin from '../Media/icons/rrss/linkedin.svg';
 import logoGitHub from '../Media/icons/rrss/github.svg';
 import logoGitLab from '../Media/icons/rrss/gitlab.svg';
 import logoGit from '../Media/icons/rrss/git.svg';
+import logoDemoLive from '../Media/icons/demoLive4.svg';
+
 
 const iconLinkedin = {
     icon: logoLinkedin,
@@ -71,6 +73,11 @@ const iconGit = {
     alt: 'Git' 
 }
 
+const iconDemoLive = {
+    icon: logoDemoLive,
+    alt: 'Live demo' 
+}
+
 export {
     iconJS,
     iconNode,
@@ -83,5 +90,6 @@ export {
     iconLinkedin,
     iconGitHub,
     iconGitLab,
-    iconGit
+    iconGit,
+    iconDemoLive
 }

@@ -9,6 +9,8 @@
 .h-link > a:hover {
     color: var(--colorI);
     cursor: pointer;
+    text-decoration: none;
+
 }
 
 

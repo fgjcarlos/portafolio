@@ -1,23 +1,70 @@
 import './card.css';
+import {iconGitHub} from '../../container/iconsExport';
+import {iconDemoLive} from '../../container/iconsExport';
+import {OverlayTrigger,Popover} from 'react-bootstrap';
 
-const Card = ({cardImg, cardBody, cardLinks}) => {
-    return(
+
+const Card = ({proyect}) => {
+
+    const {
+        image,
+        title,
+        techs,
+        description,
+        linkGit,
+        linkDemo,
+        id
+    } = proyect;
+
+    // Load img proyect
+    const urlImage = require(`../../Media/photos/${image}`).default;
+
+
+    return (
         <div className="card-container">
+
             <div id="card-img">
-                <img src={cardImg.src} alt={cardImg.alt} />
+
+                    <img src={urlImage}
+                        alt={id}/>
             </div>
-            <div id="card-body">
-                <h5>{cardBody.title}</h5>
-                <p>{cardBody.description}</p>
-            </div>
+
+            <h5>{title}</h5>
+
+            <div className="card-techs">
+                {
+                techs.map(tech => <span>{
+                    `#${tech}`
+                }</span>)
+            } </div>
+
+
+            <p>{description}</p>
+
             <div id="card-links">
-                <div id="c-link-git">
-                {cardLinks.git && <img src={cardLinks.src} alt={cardLinks.alt}/>}
-                </div>
-                <div id="c-link-live">
-                {cardLinks.play && <img src={cardLinks.src} alt={cardLinks.alt}/>}
-                </div>
-            </div>
+
+                {
+                linkGit && <img src={
+                        iconGitHub.icon
+                    }
+                    alt={
+                        iconGitHub.alt
+                    }
+                    title={
+                        iconGitHub.alt
+                    }/>
+            }
+                {
+                linkDemo && <img src={
+                        iconDemoLive.icon
+                    }
+                    alt={
+                        iconDemoLive.alt
+                    }
+                    title={
+                        iconDemoLive.alt
+                    }/>
+            } </div>
         </div>
     );
 }
