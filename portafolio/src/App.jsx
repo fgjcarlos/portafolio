@@ -30,15 +30,15 @@ function App() {
                     <Landing/>
                 </Route>
 
-                <Route path="/about" exact>
+                <Route path="/about" >
                     <About/>
                 </Route>
 
-                <Route path="/portfolio" exact>
+                <Route path="/portfolio" >
                     <Portfolio/>
                 </Route>
 
-                <Route path="/blog" exact>
+                <Route path="/blog" >
                     <h1>blog</h1>
                 </Route>
 

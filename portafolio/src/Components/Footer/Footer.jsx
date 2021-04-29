@@ -18,7 +18,9 @@ const Footer = () => {
 
                 <div className="f-linksContainers">
                     {
-                    listIRRSS.map(rrss => <div id="f-rrss">
+                    listIRRSS.map(rrss => <div id="f-rrss"     key={
+                        rrss.alt
+                    }>
 
                         <img src={
                                 rrss.icon
@@ -26,9 +28,7 @@ const Footer = () => {
                             alt={
                                 rrss.alt
                             }
-                            key={
-                                rrss.alt
-                            }/>
+                        />
 
                     </div>)
                 } </div>

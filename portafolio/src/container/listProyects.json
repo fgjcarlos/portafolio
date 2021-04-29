@@ -10,7 +10,7 @@
     },
     {
         "image": "porfolioProyect.webp",
-        "id": "portfolio",
+        "id": "portfolio1",
         "title": "Portafolio",
         "techs": ["React", "HTML", "CSS", "JS"],
         "description": "Web personal, para compartir mis proyectos y aficiones",
@@ -19,7 +19,7 @@
     },
     {
         "image": "porfolioProyect.webp",
-        "id": "portfolio",
+        "id": "portfolio3",
         "title": "Portafolio",
         "techs": ["React", "HTML", "CSS", "JS"],
         "description": "Web personal, para compartir mis proyectos y aficiones",

@@ -27,16 +27,16 @@ const ListIconSkills = () => {
 
 
     return (<div className="ab-listSkils"> {
-        listIconsSkills.map(({icon, alt}) => <div className="ab-iconSkill">
+        listIconsSkills.map(({icon, alt}) => <div className="ab-iconSkill"                 key={
+            alt
+        }>
             <img src={
                     icon
                 }
                 alt={
                     alt
                 }
-                key={
-                    alt
-                }
+
                 title={alt}
 
             />  </div>)

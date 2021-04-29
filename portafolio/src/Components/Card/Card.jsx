@@ -1,8 +1,6 @@
 import './card.css';
 import {iconGitHub} from '../../container/iconsExport';
 import {iconDemoLive} from '../../container/iconsExport';
-import {OverlayTrigger,Popover} from 'react-bootstrap';
-
 
 const Card = ({proyect}) => {
 
@@ -33,7 +31,7 @@ const Card = ({proyect}) => {
 
             <div className="card-techs">
                 {
-                techs.map(tech => <span>{
+                techs.map(tech => <span key={tech} >{
                     `#${tech}`
                 }</span>)
             } </div>

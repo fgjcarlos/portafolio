@@ -14,7 +14,7 @@ const Portfolio = () => { // set type page, for header and footer
             <div className="ab-jumbotron">
                 <h1>Proyectos personales</h1>
                 <div className="p-proyects"> {
-                    listProyects.map((proyect) => <Card proyect={proyect}/>)
+                    listProyects.map((proyect) => <Card key={proyect.id} proyect={proyect}/>)
                 } </div>
             </div>
 
