@@ -1,0 +1,14 @@
+.root-container{
+    position: relative;
+    margin: 0px;
+}
+
+.root-section{
+    scroll-margin-top: 60px;
+}
+
+.section-common{
+    padding: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}

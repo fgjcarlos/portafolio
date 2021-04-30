@@ -1,11 +1,7 @@
 import './landing.css';
 import Typed from 'react-typed';
-import {useDispatch} from 'react-redux';
 
 const Landing = () => {
-
-    const dispatch = useDispatch();
-    dispatch({type: 'landing'});
 
     return (
 

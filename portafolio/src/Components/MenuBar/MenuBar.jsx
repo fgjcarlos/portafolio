@@ -1,19 +1,13 @@
 import {useRef, useState} from 'react';
-import {useSelector} from 'react-redux';
 import './menuBar.css';
 import MenuLinks from '../MenuLinks/MenuLinks';
 import useOutsideAlerter from '../../hooks/useOutsideAlerter';
 
 export const MenuBarDesktop = ({linkActive}) => {
 
-    const isLandingPage = useSelector(s => s.header);
-
-    const setBackgroudLinks = (isLandingPage === 'h-landing' ? 'links-land' : '');
-
     return (<div className={
-        'h-links ' + setBackgroudLinks
+        'h-links ' 
     }>
-
         <MenuLinks linkActive={linkActive}/>
 
     </div>);

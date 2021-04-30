@@ -25,7 +25,7 @@
 
 @media screen and (max-width: 767px){
     .h-links{
-        width: 100%;
+        /* width: 100%; */
         margin: 0;
         font-size: 1.5rem;
         position: absolute;

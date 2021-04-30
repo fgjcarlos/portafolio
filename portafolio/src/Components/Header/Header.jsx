@@ -4,13 +4,12 @@ import Linkfgjcarlos from '../Linkfgjcarlos/Linkfgjcarlos';
 import { useSelector} from 'react-redux';
 import './header.css';
 
-const Header = () => {
+const Header = ({landingStyle}) => {
 
     const isDesktopOrLaptop = useMediaQuery({query: '(min-device-width: 768px)'});
-    const isTypeHeader = useSelector(s => s.header);
 
     return (
-        <div className={"h-container " + isTypeHeader}>
+        <div className={"h-container " + landingStyle}>
 
             <Linkfgjcarlos customStyle={''}/>
 

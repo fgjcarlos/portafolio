@@ -18,30 +18,8 @@
     z-index: 4;
 }
 
-.f-links a,
-.f-links a:hover {
-    text-decoration: none;
-}
-
-.f-menuItem {
-    font-size: calc(1rem + 0.1vw);
-    z-index: 4;
-    margin: 20px;
-}
-
-
 #f-credit {
     margin-left: 20px;
-}
-
-.f-links > span:hover,
-#f-credit:hover {
-    cursor: pointer;
-    color: var(--colorI);
-}
-
-.f-linksContainers {
-    display: flex;
 }
 
 .f-nameDescription {
@@ -52,8 +30,7 @@
     align-self: center;
 }
 
-
-@media screen and(max-width: 767px) {
+@media screen and (max-width: 767px) {
 
     .f-links {
         flex-direction: column;

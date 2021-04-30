@@ -13,9 +13,11 @@
 
 
 html, body, #root{
-  height: 100%;
-  margin: 0;
-  padding: 0; 
+  scroll-behavior: smooth;
+  /* min-height: 100vh;
+  min-width: 100vw; */
+  margin: 0px;
+  padding: 0px; 
   display:block;
   font-family: 'Open Sans', 'Roboto' , 'Montserrat', 'EB Garamond','Libre Baskerville', serif;
  }
@@ -24,35 +26,20 @@ html, body, #root{
   text-align: center;
   box-sizing: border-box;
   position: relative;
-  background-color: var(--colorV);
-  background-image: url('./Media/photos/back1-landing.webp');
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
+  background-color: var(--colorVII);
+  margin: 0px;
+  /* min-height: 100%;
+  min-width: 100%; */
   position: relative;
   font-size: 1rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding-top: 60px;
-
 }
 
-.App::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.4);
-}
 
 .App h1, h2, h3, h4, h5 {
   font-family: 'Bangers' , 'Montserrat', 'EB Garamond','Libre Baskerville', serif;
-
 }
 
 .notFooter {

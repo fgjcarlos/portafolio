@@ -1,34 +1,15 @@
 .ab-container{
-    padding: 5vw;
     box-sizing: border-box;
     z-index: 1;
     position: relative;
     animation: showDiv 500ms ease;
-}
-
-.ab-jumbotron{
-    height: 100%;
-    width: 80%;
-    margin: 0px auto 0px auto;
-    border-radius: 10px;
-    padding: 30px;
-    background-color: var(--colorVII);
-    /* box-shadow: 0px 0px 2px 1px var(--colorIII); */
-
-}
-
-.ab-aboutMe{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-}
-
-.skill-toolTip{
-    background-color: brown;
 }
 
 .ab-avatar{
+    align-self: center;
     border: 1px solid var(--colorVI);
     border-radius: 100%;
     background-image: url('../../Media/photos/personal-avatar.webp');
@@ -38,44 +19,29 @@
     box-shadow: inset 0px 0px 10px 5px var(--colorII) ;
 }
 
-.ab-description{
-    width: 100%;
+.ab-common{
+    margin-bottom: 30px;
+
+}
+
+.ab-container p{
     text-align: left;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
-.ab-description > h2{
-    text-align: center;
-}
-
-.ab-lineaSeccion{
-    margin: 20px auto 20px auto;
-    width: 90%;
-    color: var(--colorIII);
-}
-
-.ab-skills {
-    padding-bottom: 20px;
-    padding-top: 20px;
-
-}
 
 @media screen and (orientation: portrait){
     .ab-avatar{
-        min-width: 35vw;
-        height: 35vw;
+        width: 30vw;
+        height: 30vw;
     }
 }
 
 @media screen and (orientation: landscape){
     .ab-avatar{
-        min-width: 35vh;
-        height: 35vh;
+        width: 30vh;
+        height: 30vh;
     }
 }
-
-
 
 @keyframes showDiv {
      0%{    

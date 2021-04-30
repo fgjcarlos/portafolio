@@ -13,9 +13,9 @@
     padding: 30px;
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.8);
-    -webkit-transition: background-color 800ms ease;
-    -ms-transition: background-color 800ms ease;
-    transition: background-color 800ms ease;
+    -webkit-transition: background-color 300ms ease;
+    -ms-transition: background-color 300ms ease;
+    transition: background-color 300ms ease;
 }
 
 .h-container a, .h-container a:hover {
