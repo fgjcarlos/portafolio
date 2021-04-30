@@ -11,13 +11,18 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-image: url('../../Media/photos/back1-landing.webp');
+    /* background-image: url('../../Media/photos/back1-landing.webp');
     background-position:  right;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     box-sizing: border-box;
     position: relative;
+    background-attachment: local;
+
 }
+
+
+
 
 .lan-common{
     position: absolute;

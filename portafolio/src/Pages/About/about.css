@@ -50,23 +50,28 @@
 }
 
 .ab-lineaSeccion{
-    margin: 40px auto 40px auto;
+    margin: 20px auto 20px auto;
     width: 90%;
     color: var(--colorIII);
 }
 
+.ab-skills {
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+}
 
 @media screen and (orientation: portrait){
     .ab-avatar{
-        min-width: 40vw;
-        height: 40vw;
+        min-width: 35vw;
+        height: 35vw;
     }
 }
 
 @media screen and (orientation: landscape){
     .ab-avatar{
-        min-width: 40vh;
-        height: 40vh;
+        min-width: 35vh;
+        height: 35vh;
     }
 }
 

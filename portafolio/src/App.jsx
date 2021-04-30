@@ -7,6 +7,7 @@ import Header from "./Components/Header/Header";
 import Landing from "./Pages/Landing/Landing";
 import Portfolio from "./Pages/Portfolio/Portfolio";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Contact from "./Pages/Contact/Contact";
 
 function App() {
 
@@ -40,6 +41,10 @@ function App() {
 
                 <Route path="/blog" >
                     <h1>blog</h1>
+                </Route>
+
+                <Route path="/contact" >
+                    <Contact />
                 </Route>
 
             </Switch>

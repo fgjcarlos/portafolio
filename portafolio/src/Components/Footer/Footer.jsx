@@ -1,12 +1,11 @@
 import './footer.css';
-import {iconLinkedin, iconGitHub, iconGitLab} from '../../container/iconsExport';
 import MenuLinks from '../MenuLinks/MenuLinks';
 import Linkfgjcarlos from '../Linkfgjcarlos/Linkfgjcarlos';
+// import ListSocialMedia from '../ListSocialMedia/ListSocialMedia';
 
 
 const Footer = () => {
 
-    const listIRRSS = [iconLinkedin, iconGitHub, iconGitLab];
 
     return (
         <div className="f-container">
@@ -15,24 +14,11 @@ const Footer = () => {
                 <Linkfgjcarlos customStyle={'footer-link'}/>
 
                 <MenuLinks/>
-
+{/* 
                 <div className="f-linksContainers">
-                    {
-                    listIRRSS.map(rrss => <div id="f-rrss"     key={
-                        rrss.alt
-                    }>
+                <ListSocialMedia />
 
-                        <img src={
-                                rrss.icon
-                            }
-                            alt={
-                                rrss.alt
-                            }
-                        />
-
-                    </div>)
-                } </div>
-
+                     </div> */}
 
             </div>
             <div className="f-nameDescription">

@@ -8,7 +8,8 @@ const Landing = () => {
     dispatch({type: 'landing'});
 
     return (
-        <div className="lan-container">
+
+    <div className="lan-container">
             <div className="lan-msg lan-common">
                 <Typed strings={
                         ['¡Hola!', 'soy Carlos Fontán', 'Desarrollador web', '¡Bienvenid@!']
@@ -17,7 +18,8 @@ const Landing = () => {
                     smartBackspace={true}
                     typeSpeed={70}/>
             </div>
-        </div>
+    </div>
+
     );
 }
 

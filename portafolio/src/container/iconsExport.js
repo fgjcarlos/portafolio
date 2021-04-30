@@ -6,26 +6,34 @@ import logoMysql from '../Media/icons/rrss/mysql.svg';
 import logoCss3 from '../Media/icons/rrss/css3.svg';
 import logoJava from '../Media/icons/rrss/java.svg';
 import logoNpm from '../Media/icons/rrss/npm.svg';
-import logoLinkedin from '../Media/icons/rrss/linkedin.svg';
+import logoLinkedin from '../Media/icons/rrss/linkedin2.svg';
 import logoGitHub from '../Media/icons/rrss/github.svg';
 import logoGitLab from '../Media/icons/rrss/gitlab.svg';
 import logoGit from '../Media/icons/rrss/git.svg';
 import logoDemoLive from '../Media/icons/demoLive4.svg';
+import logoEmail from '../Media/icons/email.svg';
 
+const iconEmail = {
+    icon: logoEmail,
+    alt: 'Email',
+    src: 'mailto:fgjcarlos@gmail.com'
+}
 
 const iconLinkedin = {
     icon: logoLinkedin,
-    alt: 'Linkieding' 
+    alt: 'Linkedin',
+    src: 'https://linkedin.com/in/fgjcarlos'
 }
 
 const iconGitHub = {
     icon: logoGitHub,
-    alt: 'GitHub' 
+    alt: 'GitHub',
+    src: 'https://github.com/fgjcarlos'
 }
 
 const iconGitLab = {
     icon: logoGitLab,
-    alt: 'GitLab' 
+    alt: 'GitLab'
 }
 
 const iconJS = {
@@ -91,5 +99,6 @@ export {
     iconGitHub,
     iconGitLab,
     iconGit,
-    iconDemoLive
+    iconDemoLive,
+    iconEmail
 }
