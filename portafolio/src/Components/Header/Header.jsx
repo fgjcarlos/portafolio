@@ -1,7 +1,6 @@
 import {useMediaQuery} from 'react-responsive';
 import {MenuBarDesktop, MenuBarDevice} from '../MenuBar/MenuBar';
 import Linkfgjcarlos from '../Linkfgjcarlos/Linkfgjcarlos';
-import { useSelector} from 'react-redux';
 import './header.css';
 
 const Header = ({landingStyle}) => {

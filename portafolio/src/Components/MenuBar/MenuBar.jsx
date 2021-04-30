@@ -6,7 +6,7 @@ import useOutsideAlerter from '../../hooks/useOutsideAlerter';
 export const MenuBarDesktop = ({linkActive}) => {
 
     return (<div className={
-        'h-links ' 
+        'h-links' 
     }>
         <MenuLinks linkActive={linkActive}/>
 
