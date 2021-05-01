@@ -25,14 +25,14 @@
 
 @media screen and (max-width: 767px){
     .h-links{
-        /* width: 100%; */
+        width: 100%;
         margin: 0;
         font-size: 1.5rem;
         position: absolute;
         top: 60px;
         right: 0;
         z-index: 9;
-        background-color: rgba(55, 59, 65, 0.95);
+        background-color: rgba(180, 180, 180, 0.8);
     }
 
     .links-land{

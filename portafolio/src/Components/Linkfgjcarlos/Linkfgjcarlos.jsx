@@ -1,30 +1,22 @@
-import { NavHashLink } from 'react-router-hash-link';
+import {NavHashLink} from 'react-router-hash-link';
 import './linkfgjcarlos.css';
 
 const Linkfgjcarlos = ({customStyle}) => {
 
-    const colorActive = '#ff7f2f';
-
-
     return (
 
-        <div className={'linkHome ' + customStyle}>
+        <div className={
+            'linkHome ' + customStyle
+        }>
 
-
-<NavHashLink to='/#landing'
-        activeClassName={'linkHome ' + customStyle}
-        smooth
-        activeStyle={
-            {color: colorActive}
-    }>
-        FGJCARLOS</NavHashLink>
+            <NavHashLink to='/#landing'
+                activeClassName={
+                    'linkHome ' + customStyle
+                }
+                smooth>
+                FGJCARLOS</NavHashLink>
 
         </div>
-
-
-        // <NavLink to="/">
-        //     <div className={'linkHome ' + customStyle}>FGJCARLOS</div>
-        // </NavLink>
     );
 }
 

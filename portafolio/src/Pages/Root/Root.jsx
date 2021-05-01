@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+import { useMediaQuery } from 'react-responsive';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 import About from '../About/About';
@@ -11,16 +12,21 @@ const Root = () => {
 
     const [headerColor, setHeaderColor] = useState(true);
 
+    const isDevicePortrait = useMediaQuery({ orientation: 'portrait', maxHeight: 768 });
+    const isDeviceLandscape = useMediaQuery({ orientation: 'landscape', maxHeight: 500 });
+
+    const offsetY = isDevicePortrait ? 500 : isDeviceLandscape ? 200 : 600 ;
+
     const landinHeader = headerColor ? 'h-landing' : '';
 
     const changeHeader = () => {
-        const condOffsetY = (window.pageYOffset < 600);
+        const condOffsetY = (window.pageYOffset < offsetY);
         setHeaderColor(condOffsetY);
     }
 
     useEffect(() => {
         window.addEventListener('scroll', changeHeader)
-    }, []);
+    },[]);
 
     return (
 
@@ -58,8 +64,6 @@ const Root = () => {
             <section id="contact" className="root-section section-contact section-common">
                 <Contact/>
             </section>
-
-
 
             <Footer/>
         </div>

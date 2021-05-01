@@ -1,4 +1,4 @@
-import {HashLink, NavHashLink} from 'react-router-hash-link';
+import {NavHashLink} from 'react-router-hash-link';
 import './menuLinks.css';
 
 const MenuLinks = ({linkActive}) => {
@@ -30,6 +30,7 @@ const MenuLinks = ({linkActive}) => {
             nameLinks.map(({text, path, id}) => <div className="h-link"
                 key={id}>
                 <NavHashLink to={path}
+                onClick={linkActive}
                     activeClassName="selected"
                     smooth
                     activeStyle={

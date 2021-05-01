@@ -9,6 +9,8 @@
 }
 
 .ab-avatar{
+    width: 35vw;
+    height: 35vw;
     align-self: center;
     border: 1px solid var(--colorVI);
     border-radius: 100%;
@@ -31,15 +33,15 @@
 
 @media screen and (orientation: portrait){
     .ab-avatar{
-        width: 30vw;
-        height: 30vw;
+        width: 40vw;
+        height: 40vw;
     }
 }
 
 @media screen and (orientation: landscape){
     .ab-avatar{
-        width: 30vh;
-        height: 30vh;
+        width: 45vh;
+        height: 45vh;
     }
 }
 
