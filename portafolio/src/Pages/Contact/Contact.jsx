@@ -1,4 +1,4 @@
-import ListSocialMedia from '../../Components/ListSocialMedia/ListSocialMedia';
+import ListSocialMedia from '../../components/ListSocialMedia/ListSocialMedia';
 import './contact.css';
 
 const Contact = () => {

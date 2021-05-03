@@ -1,7 +1,7 @@
-import {useEffect, useState} from 'react';
-import { useMediaQuery } from 'react-responsive';
-import Footer from '../../Components/Footer/Footer';
-import Header from '../../Components/Header/Header';
+import {useCallback, useEffect, useState} from 'react';
+import {useMediaQuery} from 'react-responsive';
+import Footer from '../../components/Footer/Footer';
+import Header from '../../components/Header/Header';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
 import Landing from '../Landing/Landing';
@@ -10,27 +10,28 @@ import './root.css';
 
 const Root = () => {
 
-    const [headerColor, setHeaderColor] = useState(true);
+    const [scrollY, setScrollY] = useState(true);
 
-    const isDevicePortrait = useMediaQuery({ orientation: 'portrait', maxHeight: 768 });
-    const isDeviceLandscape = useMediaQuery({ orientation: 'landscape', maxHeight: 500 });
+    const isDevicePortrait = useMediaQuery({orientation: 'portrait', maxHeight: 768});
+    const isDeviceLandscape = useMediaQuery({orientation: 'landscape', maxHeight: 500});
 
-    const offsetY = isDevicePortrait ? 500 : isDeviceLandscape ? 200 : 600 ;
+    const offsetY = isDevicePortrait ? 450 : isDeviceLandscape ? 220 : 600;
 
-    const landinHeader = headerColor ? 'h-landing' : '';
+    const landinHeader = scrollY ? 'h-landing' : '';
 
-    const changeHeader = () => {
+    const handleScrollY = useCallback(() => {
         const condOffsetY = (window.pageYOffset < offsetY);
-        setHeaderColor(condOffsetY);
-    }
+        setScrollY(condOffsetY)
+    }, [offsetY]);
 
     useEffect(() => {
-        window.addEventListener('scroll', changeHeader)
-    },[]);
+        window.addEventListener('scroll', handleScrollY);
+    }, [handleScrollY]);
 
     return (
-
         <div className="root-container">
+
+
             <Header landingStyle={landinHeader}/>
 
             <section id="landing" className="root-section section-landing">
@@ -48,16 +49,15 @@ const Root = () => {
             <section id="blog" className="root-section section-blog section-common">
                 <h2>Blog</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam quia impedit animi perferendis culpa nam, laboriosam ad itaque, quod fugit magnam sunt quae molestias nihil. Fuga atque iusto reiciendis aliquam.
-                Vel voluptatibus quod quos atque fuga assumenda cum, accusantium, laudantium, totam facere ullam mollitia voluptas odio sit officiis explicabo? Iure minus mollitia illum architecto molestiae totam placeat. Voluptate, sed earum.
-                Rerum, non tenetur pariatur expedita nemo dignissimos ad vitae temporibus maxime aut labore quisquam adipisci dolorem, perspiciatis consectetur inventore consequatur fugiat neque odit. Consequuntur quos repellat totam illum consequatur at!
-                At sed corrupti adipisci, atque deserunt impedit assumenda itaque dignissimos consequuntur magnam veritatis reprehenderit fugiat aliquam quia, minus doloremque magni inventore esse suscipit earum eveniet! Corporis omnis recusandae aperiam accusantium?
-                
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit dolore delectus blanditiis quo voluptatum facere? Culpa molestiae iure ipsa vitae exercitationem ab rem quos. Aliquid voluptatibus amet illum rerum iure.
-                Consequuntur vel, qui tenetur numquam tempore at iure molestias fugit, rem perspiciatis reprehenderit quia aliquam. Neque id molestias corrupti, inventore veritatis eaque, minus nisi sunt, blanditiis magnam deleniti magni ipsa!
-                Nihil non accusantium error. Voluptatem, reiciendis explicabo impedit alias ratione voluptas illo quod temporibus quibusdam voluptates minima velit. Distinctio a quisquam facere suscipit nostrum magnam consequatur architecto facilis earum iure.
-                Illum enim harum numquam quibusdam sint ut, dolores fugiat ipsam quod laborum dignissimos repellat! Quis hic recusandae beatae laboriosam officiis, sit quia suscipit velit tenetur est ad delectus eligendi iure?
-                Quod qui iusto, cum deleniti rem quo aliquam aut quasi maxime optio a unde ea excepturi, autem ipsam cumque illo omnis consectetur pariatur atque totam amet debitis ab fugit. Nulla?
-                
+                                                            Vel voluptatibus quod quos atque fuga assumenda cum, accusantium, laudantium, totam facere ullam mollitia voluptas odio sit officiis explicabo? Iure minus mollitia illum architecto molestiae totam placeat. Voluptate, sed earum.
+                                                            Rerum, non tenetur pariatur expedita nemo dignissimos ad vitae temporibus maxime aut labore quisquam adipisci dolorem, perspiciatis consectetur inventore consequatur fugiat neque odit. Consequuntur quos repellat totam illum consequatur at!
+                                                            At sed corrupti adipisci, atque deserunt impedit assumenda itaque dignissimos consequuntur magnam veritatis reprehenderit fugiat aliquam quia, minus doloremque magni inventore esse suscipit earum eveniet! Corporis omnis recusandae aperiam accusantium?
+                                                            
+                                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit dolore delectus blanditiis quo voluptatum facere? Culpa molestiae iure ipsa vitae exercitationem ab rem quos. Aliquid voluptatibus amet illum rerum iure.
+                                                            Consequuntur vel, qui tenetur numquam tempore at iure molestias fugit, rem perspiciatis reprehenderit quia aliquam. Neque id molestias corrupti, inventore veritatis eaque, minus nisi sunt, blanditiis magnam deleniti magni ipsa!
+                                                            Nihil non accusantium error. Voluptatem, reiciendis explicabo impedit alias ratione voluptas illo quod temporibus quibusdam voluptates minima velit. Distinctio a quisquam facere suscipit nostrum magnam consequatur architecto facilis earum iure.
+                                                            Illum enim harum numquam quibusdam sint ut, dolores fugiat ipsam quod laborum dignissimos repellat! Quis hic recusandae beatae laboriosam officiis, sit quia suscipit velit tenetur est ad delectus eligendi iure?
+                                                            Quod qui iusto, cum deleniti rem quo aliquam aut quasi maxime optio a unde ea excepturi, autem ipsam cumque illo omnis consectetur pariatur atque totam amet debitis ab fugit. Nulla?
                 </p>
             </section>
 
@@ -66,8 +66,8 @@ const Root = () => {
             </section>
 
             <Footer/>
-        </div>
 
+        </div>
     );
 
 }

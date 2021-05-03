@@ -32,11 +32,7 @@
         top: 60px;
         right: 0;
         z-index: 9;
-        background-color: rgba(180, 180, 180, 0.8);
-    }
-
-    .links-land{
-        background-color: rgba(92, 92, 92, 0.4); 
+        background-color: var(--colorVI);
     }
 }
 

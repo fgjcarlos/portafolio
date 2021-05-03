@@ -26,6 +26,10 @@
     background-color: transparent;
 }
 
+.h-DarkColorHeader{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 @media screen and (max-width: 767px){
     .h-container{
         height: 40px;

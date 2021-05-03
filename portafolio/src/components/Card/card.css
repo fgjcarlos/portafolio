@@ -11,7 +11,7 @@
     box-sizing: border-box;
     position: relative;
     margin: 30px;
-    background-color: var(--colorVII);
+    background-color: rgb(255, 255, 255);
 }
 
 .card-container:hover{
@@ -46,6 +46,8 @@
 
 #card-img > img{
     width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 

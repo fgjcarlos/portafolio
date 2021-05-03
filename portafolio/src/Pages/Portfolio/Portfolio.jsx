@@ -1,5 +1,5 @@
 import './portfolio.css';
-import Card from '../../Components/Card/Card';
+import Card from '../../components/Card/Card';
 import listProyects from '../../container/listProyects.json';
 
 const Portfolio = () => {
