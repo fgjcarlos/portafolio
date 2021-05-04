@@ -18,3 +18,10 @@
         padding: 40px;
     }
 }
+
+@media screen and (min-width: 1024px){
+    .section-common{
+        padding-left: 250px;
+        padding-right: 250px;
+    }
+}

@@ -17,7 +17,6 @@ const Card = ({proyect}) => {
     // Load img proyect
     const urlImage = require(`../../Media/photos/${image}`).default;
 
-
     return (
         <div className="card-container">
 
@@ -35,7 +34,6 @@ const Card = ({proyect}) => {
                     `#${tech}`
                 }</span>)
             } </div>
-
 
             <p>{description}</p>
 
@@ -66,6 +64,5 @@ const Card = ({proyect}) => {
         </div>
     );
 }
-
 
 export default Card;

@@ -8,17 +8,14 @@ const Linkfgjcarlos = ({customStyle}) => {
         <div className={
             'linkHome ' + customStyle
         }>
-
             <NavHashLink to='/#landing'
                 activeClassName={
                     'linkHome ' + customStyle
                 }
                 smooth>
                 FGJCARLOS</NavHashLink>
-
         </div>
     );
 }
-
 
 export default Linkfgjcarlos;

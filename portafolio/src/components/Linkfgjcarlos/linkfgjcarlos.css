@@ -1,31 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
-
 .linkHome a{
     font-family: 'Monoton', cursive, serif;
     text-align: left;
     font-size: 1.6rem;
     color: var(--colorV);
     margin-left: 4vw;
-    text-decoration: none;
 }
 
 .linkHome a:hover{
     transform: scale(1.5);
     color: var(--colorI);
-    text-decoration: none;
 }
-
 
 .footer-link a{
     font-size: 1.3rem;
+}
+
+.linkHome a,.linkHome a:hover, .footer-link a{
     text-decoration: none;
 }
 
-
-
 @media screen and (max-width: 767px){
-
 
     .linkHome a{
     font-size: 1.4rem;

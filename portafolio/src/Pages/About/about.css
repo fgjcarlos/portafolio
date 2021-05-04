@@ -30,7 +30,6 @@
     text-align: left;
 }
 
-
 @media screen and (orientation: portrait){
     .ab-avatar{
         width: 40vw;
@@ -51,8 +50,6 @@
         height: 30vh;
     }
 }
-
-
 
 @keyframes showDiv {
      0%{    

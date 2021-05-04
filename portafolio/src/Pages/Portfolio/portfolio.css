@@ -1,10 +1,8 @@
 .p-container {
     z-index: 1;
     position: relative;
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     animation: showDiv 500ms ease;
 }
 
@@ -14,16 +12,17 @@
 
 .p-proyects {
     width: 100%;
-    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-items: center;
 }
 
+.p-container,.p-proyects{
+    display: flex;
+    align-items: center;
+}
 
 @media screen and (max-width: 550px)  {
     .p-proyects {
         justify-content: center;
     }
 }
-

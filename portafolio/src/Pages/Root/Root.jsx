@@ -11,12 +11,9 @@ import './root.css';
 const Root = () => {
 
     const [scrollY, setScrollY] = useState(true);
-
     const isDevicePortrait = useMediaQuery({orientation: 'portrait', maxHeight: 768});
     const isDeviceLandscape = useMediaQuery({orientation: 'landscape', maxHeight: 500});
-
     const offsetY = isDevicePortrait ? 450 : isDeviceLandscape ? 220 : 600;
-
     const landinHeader = scrollY ? 'h-landing' : '';
 
     const handleScrollY = useCallback(() => {
@@ -30,7 +27,6 @@ const Root = () => {
 
     return (
         <div className="root-container">
-
 
             <Header landingStyle={landinHeader}/>
 
@@ -71,6 +67,5 @@ const Root = () => {
     );
 
 }
-
 
 export default Root;

@@ -5,14 +5,10 @@ const Contact = () => {
 
     return (
         <div className="contact-container">
-                <h2>Contacto</h2>
-                <p>Si quieres charlar sobre desarrollo web, sobre alguna afición que tengamos 
-                                        en común, darme un feedback o cualquier consulta de alguno de mis 
-                                        proyectos, o mejor aún, si crees que mi perfil profesional encaja con lo 
-                                        que buscas, ¡no dudes en contactar conmigo!</p>
-
-
-                    <ListSocialMedia/>
+            <h2>Contacto</h2>
+            <p>Si tienes algún feedback o consulta sobre alguno de mis proyectos, o simplemente quieres charlar sobre desarrollo web o de alguna afición que tengamos en común, no dudes en contactar conmigo.
+                Y mejor…, si crees que mi perfil profesional encaja con lo que buscas, estaré encantado de escucharte.</p>
+            <ListSocialMedia/>
         </div>
     );
 

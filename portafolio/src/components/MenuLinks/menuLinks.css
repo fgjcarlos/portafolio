@@ -3,15 +3,16 @@
     margin: 5px;
     color: var(--colorV);
     align-self: flex-end;
-    text-decoration: none;
 }
 
 .h-link > a:hover {
     color: var(--colorI);
     cursor: pointer;
-    text-decoration: none;
 }
 
+.h-link, .h-link > a,.h-link > a:hover{
+    text-decoration: none;
+} 
 
 @media screen and (max-width: 767px){
 

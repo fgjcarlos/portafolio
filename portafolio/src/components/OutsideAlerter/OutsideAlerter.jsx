@@ -6,7 +6,6 @@ import PropTypes from "prop-types";
 import { useEffect, useRef} from "react";
 import useOutsideAlerter from "../../hooks/useOutsideAlerter";
 
-
  function OutsideAlerter(props, {isClickOutside}) {
 
     const wrapperRef = useRef(null);
@@ -16,8 +15,6 @@ import useOutsideAlerter from "../../hooks/useOutsideAlerter";
         console.log(isClicked);
     }, [isClicked]);
 
-   
-  
     return <div ref={wrapperRef} onClick={isClickOutside}>{props.children}</div>;
   }
   
@@ -26,4 +23,3 @@ import useOutsideAlerter from "../../hooks/useOutsideAlerter";
   };
   
   export default OutsideAlerter;
-  

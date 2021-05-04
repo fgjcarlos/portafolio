@@ -10,9 +10,7 @@ import {
     iconGit
 } from '../../container/iconsExport';
 
-
 const ListIconSkills = () => {
-
 
     const listIconsSkills = [
         iconJS,
@@ -25,11 +23,8 @@ const ListIconSkills = () => {
         iconGit
     ];
 
-
     return (<div className="ab-listSkils"> {
-        listIconsSkills.map(({icon, alt}) => <div className="ab-iconSkill"                 key={
-            alt
-        }>
+        listIconsSkills.map(({icon, alt}) => <div className="ab-iconSkill"  key={alt}>
             <img src={
                     icon
                 }

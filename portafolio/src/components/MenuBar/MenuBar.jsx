@@ -23,11 +23,9 @@ export const MenuBarDevice = () => {
     const wrapperRef = useRef(null);
     const {isClicked} =  useOutsideAlerter(wrapperRef);
 
-
     useEffect(() =>{
         setHeaderBackColor(showMenu);
     },[setHeaderBackColor,showMenu]);
-
 
     const handleShowMenuHam = () => {
         setShowMenu(!showMenu);
@@ -44,6 +42,4 @@ export const MenuBarDevice = () => {
             <MenuBarDesktop linkActive={handleShowMenuHam} />
         </div>
     } </div>);
-
-
 }
