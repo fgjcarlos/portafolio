@@ -1,9 +1,9 @@
 import {useMediaQuery} from 'react-responsive';
-import {MenuBarDesktop, MenuBarDevice} from '../MenuBar/MenuBar';
-import Linkfgjcarlos from '../Linkfgjcarlos/Linkfgjcarlos';
+import {MenuBarDesktop, MenuBarDevice} from 'components/MenuBar/MenuBar';
+import Linkfgjcarlos from 'components/Linkfgjcarlos/Linkfgjcarlos';
 import './header.css';
 import { useContext } from 'react';
-import HeaderContext from '../../context/headerContext';
+import HeaderContext from 'context/headerContext';
 
 const Header = ({landingStyle}) => {
 

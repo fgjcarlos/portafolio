@@ -1,8 +1,8 @@
 import {Route, Switch} from "react-router-dom";
-import './App.css';
+import 'App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Root from "./Pages/Root/Root";
-import { HeaderContextProvider } from "./context/headerContext";
+import Root from "Pages/Root/Root";
+import { HeaderContextProvider } from "context/headerContext";
 
 function App() {
 

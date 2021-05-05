@@ -1,36 +1,27 @@
-import {useCallback, useEffect, useState} from 'react';
-import {useMediaQuery} from 'react-responsive';
-import Footer from '../../components/Footer/Footer';
-import Header from '../../components/Header/Header';
-import About from '../About/About';
-import Contact from '../Contact/Contact';
-import Landing from '../Landing/Landing';
-import Portfolio from '../Portfolio/Portfolio';
+import Footer from 'components/Footer/Footer';
+import Header from 'components/Header/Header';
+import About from 'Pages/About/About';
+import Contact from 'Pages/Contact/Contact';
+import Landing from 'Pages/Landing/Landing';
+import Portfolio from 'Pages/Portfolio/Portfolio';
+import { useInView } from 'react-intersection-observer';
 import './root.css';
 
 const Root = () => {
 
-    const [scrollY, setScrollY] = useState(true);
-    const isDevicePortrait = useMediaQuery({orientation: 'portrait', maxHeight: 768});
-    const isDeviceLandscape = useMediaQuery({orientation: 'landscape', maxHeight: 500});
-    const offsetY = isDevicePortrait ? 450 : isDeviceLandscape ? 220 : 600;
-    const landinHeader = scrollY ? 'h-landing' : '';
+    const { ref, inView} = useInView({
+        threshold: 0,
+        rootMargin: '-100px',
+      });
 
-    const handleScrollY = useCallback(() => {
-        const condOffsetY = (window.pageYOffset < offsetY);
-        setScrollY(condOffsetY)
-    }, [offsetY]);
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScrollY);
-    }, [handleScrollY]);
+    const landinHeader = inView ? 'h-landing' : '';
 
     return (
         <div className="root-container">
 
             <Header landingStyle={landinHeader}/>
 
-            <section id="landing" className="root-section section-landing">
+            <section ref={ref} id="landing" className="root-section section-landing">
                 <Landing/>
             </section>
 
@@ -42,7 +33,7 @@ const Root = () => {
                 <Portfolio/>
             </section>
 
-            <section id="blog" className="root-section section-blog section-common">
+            {/* <section id="blog" className="root-section section-blog section-common">
                 <h2>Blog</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam quia impedit animi perferendis culpa nam, laboriosam ad itaque, quod fugit magnam sunt quae molestias nihil. Fuga atque iusto reiciendis aliquam.
                                                             Vel voluptatibus quod quos atque fuga assumenda cum, accusantium, laudantium, totam facere ullam mollitia voluptas odio sit officiis explicabo? Iure minus mollitia illum architecto molestiae totam placeat. Voluptate, sed earum.
@@ -55,7 +46,7 @@ const Root = () => {
                                                             Illum enim harum numquam quibusdam sint ut, dolores fugiat ipsam quod laborum dignissimos repellat! Quis hic recusandae beatae laboriosam officiis, sit quia suscipit velit tenetur est ad delectus eligendi iure?
                                                             Quod qui iusto, cum deleniti rem quo aliquam aut quasi maxime optio a unde ea excepturi, autem ipsam cumque illo omnis consectetur pariatur atque totam amet debitis ab fugit. Nulla?
                 </p>
-            </section>
+            </section> */}
 
             <section id="contact" className="root-section section-contact section-common">
                 <Contact/>

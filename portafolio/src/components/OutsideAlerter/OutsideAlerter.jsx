@@ -4,7 +4,7 @@
  */
 import PropTypes from "prop-types";
 import { useEffect, useRef} from "react";
-import useOutsideAlerter from "../../hooks/useOutsideAlerter";
+import useOutsideAlerter from "hooks/useOutsideAlerter";
 
  function OutsideAlerter(props, {isClickOutside}) {
 

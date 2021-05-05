@@ -1,5 +1,5 @@
 import './about.css';
-import ListIconSkills from '../../components/ListIconSkills/ListIconSkills';
+import ListIconSkills from 'components/ListIconSkills/ListIconSkills';
 
 const About = () => {
 

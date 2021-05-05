@@ -1,6 +1,6 @@
 import './card.css';
-import {iconGitHub} from '../../container/iconsExport';
-import {iconDemoLive} from '../../container/iconsExport';
+import {iconGitHub} from 'container/iconsExport';
+import {iconDemoLive} from 'container/iconsExport';
 
 const Card = ({proyect}) => {
 

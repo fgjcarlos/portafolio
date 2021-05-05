@@ -1,6 +1,6 @@
 import './footer.css';
-import MenuLinks from '../MenuLinks/MenuLinks';
-import Linkfgjcarlos from '../Linkfgjcarlos/Linkfgjcarlos';
+import MenuLinks from 'components/MenuLinks/MenuLinks';
+import Linkfgjcarlos from 'components//Linkfgjcarlos/Linkfgjcarlos';
 
 const Footer = () => {
 

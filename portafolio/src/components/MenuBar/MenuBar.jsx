@@ -1,8 +1,8 @@
 import {useContext, useEffect, useRef, useState} from 'react';
 import './menuBar.css';
-import MenuLinks from '../MenuLinks/MenuLinks';
-import useOutsideAlerter from '../../hooks/useOutsideAlerter';
-import HeaderContext from '../../context/headerContext';
+import MenuLinks from 'components/MenuLinks/MenuLinks';
+import useOutsideAlerter from 'hooks/useOutsideAlerter';
+import HeaderContext from 'context/headerContext';
 
 export const MenuBarDesktop = ({linkActive}) => {
 

@@ -14,11 +14,14 @@ const MenuLinks = ({linkActive}) => {
             id: 2,
             text: 'Portafolio',
             path: '#portfolio'
-        }, {
-            id: 3,
-            text: 'Blog',
-            path: '/#blog'
-        }, {
+        }, 
+        // {
+            // id: 3,
+            // text: 'Blog',
+            // path: '/#blog'
+        // }, 
+        // 
+        {
             id: 4,
             text: 'Contacto',
             path: '/#contact'

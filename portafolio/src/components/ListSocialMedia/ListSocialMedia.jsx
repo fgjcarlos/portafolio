@@ -1,5 +1,5 @@
 import './listSocialMedia.css';
-import {iconLinkedin, iconGitHub, iconEmail} from '../../container/iconsExport';
+import {iconLinkedin, iconGitHub, iconEmail} from 'container/iconsExport';
 
 const ListSocialMedia = () => {
 

@@ -8,7 +8,7 @@ import {
     iconCss3,
     iconNpm,
     iconGit
-} from '../../container/iconsExport';
+} from 'container/iconsExport';
 
 const ListIconSkills = () => {
 

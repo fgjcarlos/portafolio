@@ -13,6 +13,11 @@
     margin-left: 20px;
 }
 
+#f-credit:hover{
+    cursor: pointer;
+    color: var(--colorI);
+}
+
 .f-nameDescription {
     font-size: small;
     justify-content: space-evenly;
