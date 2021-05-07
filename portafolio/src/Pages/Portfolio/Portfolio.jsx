@@ -2,11 +2,11 @@ import './portfolio.css';
 import Card from 'components/Card/Card';
 import listProyects from 'container/listProyects.json';
 
-const Portfolio = () => {
+const Portfolio = ({portfolioLoad}) => {
 
    return (
 
-            <div className="p-container">
+            <div className="p-container"  onLoad={portfolioLoad}>
                 <h2>Proyectos personales</h2>
                 <div className="p-proyects">
                     {

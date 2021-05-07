@@ -1,37 +1,22 @@
-import {Suspense, useContext, useState,useEffect, lazy} from 'react';
-import { useInView } from 'react-intersection-observer';
-import ThemeContext from 'context/themeContext';
+import {Suspense, useState,lazy} from 'react';
 import './portfolio.css';
+import { useActiveLink } from 'hooks/useActiveLink';
+import { List } from 'react-content-loader';
 
 const Portfolio = lazy(() => import('./Portfolio'));
 
 const PortfolioLazy = () => {
 
-    const {store} = useContext(ThemeContext);
-    const [stateSkip,setStateSkip] = useState(false);
+    const [onLoad, setOnLoad] = useState(false);
+    const marginRoot = '100px';
+    const section = 'portfolio';
 
-    const { ref, inView } = useInView({
-        threshold: 0,
-        rootMargin: '100px',
-        skip: stateSkip,
-        triggerOnce: true
-      });
-
-    useEffect(() => {
-
-        if(store.linkActive === 'portfolio'){
-            setStateSkip(false);
-        }
-        
-        if(inView && (store.linkActive !== 'portfolio')){
-            setStateSkip(true);
-        }
-    },[store.linkActive,inView]);
+    const [ref, inView] = useActiveLink(onLoad, section, marginRoot);
 
     return(
         <div ref={ref} className="lazy-common">
-            <Suspense fallback={'Loading..'}>
-           { inView && <Portfolio />}
+            <Suspense fallback={<List />}>
+                { inView && <Portfolio portfolioLoad={()=> setOnLoad(true)} />}
            </Suspense>
         </div>
     )

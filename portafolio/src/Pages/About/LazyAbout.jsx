@@ -1,36 +1,22 @@
-import {Suspense, useContext, useState,useEffect, lazy} from 'react';
-import { useInView } from 'react-intersection-observer';
-import ThemeContext from 'context/themeContext';
+import {Suspense, useState, lazy} from 'react';
 import './about.css';
+import {useActiveLink} from 'hooks/useActiveLink';
+import { List } from 'react-content-loader';
 
 const About = lazy(() => import('./About'));
 
 const AboutLazy = () => {
 
-    const {store} = useContext(ThemeContext);
-    const [stateSkip,setStateSkip] = useState(false);
+    const [onLoad, setOnLoad] = useState(false);
+    const marginRoot = '-100px';
+    const section = 'about';
 
-    const { ref, inView } = useInView({
-        threshold: 0,
-        rootMargin: '-100px',
-        skip: stateSkip,
-        triggerOnce: true
-      });
-
-    useEffect(() => {
-        if(store.linkActive === 'about'){
-            setStateSkip(false);
-        }
-        
-        if(inView && (store.linkActive !== 'about')){
-            setStateSkip(true);
-        }
-    },[store.linkActive, inView]);
+    const [ref, inView] = useActiveLink(onLoad, section, marginRoot);
 
     return(
         <div ref={ref} className="lazy-common">
-            <Suspense fallback={'Loading..'}>
-           { inView && <About />}
+           <Suspense fallback={<List />}>
+                { inView && <About aboutLoad={()=> setOnLoad(true)}/>}
            </Suspense>
         </div>
     )

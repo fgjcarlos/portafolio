@@ -1,10 +1,10 @@
 import './about.css';
 import ListIconSkills from 'components/ListIconSkills/ListIconSkills';
 
-const About = () => {
+const About = ({aboutLoad}) => {
 
     return (
-        <div className="ab-container" >
+        <div className="ab-container" onLoad={aboutLoad} >
 
             <h2 className="ab-common">Sobre mí</h2>
 

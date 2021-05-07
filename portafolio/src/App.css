@@ -10,9 +10,6 @@
   --colorVI: #282828 ;
   --colorVII: #f0f0f0;
 }
-html{
-  scroll-behavior: smooth;
-}
 
 html, body, #root{
   min-height: 100%;
