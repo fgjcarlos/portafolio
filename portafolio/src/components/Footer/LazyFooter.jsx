@@ -21,5 +21,4 @@ const FooterLazy = () => {
     )
 }
 
-
 export default FooterLazy;

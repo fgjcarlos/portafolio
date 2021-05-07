@@ -3,12 +3,9 @@ import { useInView } from 'react-intersection-observer';
 import ThemeContext from 'context/themeContext';
 import './about.css';
 
-
 const About = lazy(() => import('./About'));
 
-
 const AboutLazy = () => {
-
 
     const {store} = useContext(ThemeContext);
     const [stateSkip,setStateSkip] = useState(false);
@@ -20,10 +17,7 @@ const AboutLazy = () => {
         triggerOnce: true
       });
 
-
     useEffect(() => {
-
-
         if(store.linkActive === 'about'){
             setStateSkip(false);
         }
@@ -31,8 +25,6 @@ const AboutLazy = () => {
         if(inView && (store.linkActive !== 'about')){
             setStateSkip(true);
         }
-
-
     },[store.linkActive, inView]);
 
     return(
@@ -43,6 +35,5 @@ const AboutLazy = () => {
         </div>
     )
 }
-
 
 export default AboutLazy;

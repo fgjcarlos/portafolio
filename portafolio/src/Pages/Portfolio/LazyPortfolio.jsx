@@ -37,5 +37,4 @@ const PortfolioLazy = () => {
     )
 }
 
-
 export default PortfolioLazy;
