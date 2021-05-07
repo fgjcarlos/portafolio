@@ -10,7 +10,7 @@ const Landing = () => {
                 <Typed strings={
                         ['¡Hola!', 'soy Carlos Fontán', 'Desarrollador web', '¡Bienvenid@!']
                     }
-                    startDelay={300}
+                    startDelay={100}
                     smartBackspace={true}
                     typeSpeed={70}/>
             </div>
