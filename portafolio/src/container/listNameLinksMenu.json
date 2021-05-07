@@ -1,0 +1,19 @@
+[
+    {
+        "id": "about",
+        "text": "Sobre mí",
+        "path": "#about"
+    }, 
+    
+    {
+        "id": "portfolio",
+        "text": "Portafolio",
+        "path": "#portfolio"
+    }, 
+
+    {
+        "id": "contact",
+        "text": "Contacto",
+        "path": "#contact"
+    }
+]

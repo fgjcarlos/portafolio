@@ -21,6 +21,10 @@
     align-items: center;
 }
 
+.lazy-common{
+    min-height: 50vh;
+}
+
 @media screen and (max-width: 550px)  {
     .p-proyects {
         justify-content: center;

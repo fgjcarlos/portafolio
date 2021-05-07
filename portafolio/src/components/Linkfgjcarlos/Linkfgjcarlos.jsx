@@ -1,4 +1,4 @@
-import {NavHashLink} from 'react-router-hash-link';
+// import {NavHashLink} from 'react-router-hash-link';
 import './linkfgjcarlos.css';
 
 const Linkfgjcarlos = ({customStyle}) => {
@@ -8,12 +8,13 @@ const Linkfgjcarlos = ({customStyle}) => {
         <div className={
             'linkHome ' + customStyle
         }>
-            <NavHashLink to='/#landing'
-                activeClassName={
-                    'linkHome ' + customStyle
-                }
-                smooth>
-                FGJCARLOS</NavHashLink>
+            <a href='#landing'
+                // activeClassName={
+                //     'linkHome ' + customStyle
+                // }
+                // smooth
+                >
+                FGJCARLOS</a>
         </div>
     );
 }

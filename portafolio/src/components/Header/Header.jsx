@@ -3,13 +3,13 @@ import {MenuBarDesktop, MenuBarDevice} from 'components/MenuBar/MenuBar';
 import Linkfgjcarlos from 'components/Linkfgjcarlos/Linkfgjcarlos';
 import './header.css';
 import { useContext } from 'react';
-import HeaderContext from 'context/headerContext';
+import ThemeContext from 'context/themeContext';
 
 const Header = ({landingStyle}) => {
 
-    const {headerBackColor} = useContext(HeaderContext);
+    const {store} = useContext(ThemeContext);
     const isDesktopOrLaptop = useMediaQuery({query: '(min-device-width: 768px)'});
-    const darkHeader = headerBackColor ? 'h-DarkColorHeader' : '';
+    const darkHeader = store.headerBackColor ? 'h-DarkColorHeader' : '';
 
     return (
         <div className={`h-container ${landingStyle} ${darkHeader}`}>

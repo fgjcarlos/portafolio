@@ -12,3 +12,7 @@
 .contact-container p{
     text-align: center;
 }
+
+.lazy-common-contact{
+    min-height: 40vh;
+}

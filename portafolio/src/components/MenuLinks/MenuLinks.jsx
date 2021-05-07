@@ -1,45 +1,33 @@
-import {NavHashLink} from 'react-router-hash-link';
+// import {NavHashLink} from 'react-router-hash-link';
 import './menuLinks.css';
+import nameLinks from 'container/listNameLinksMenu.json';
+import { useContext } from 'react';
+import ThemeContext from 'context/themeContext';
 
-const MenuLinks = ({linkActive}) => {
+const MenuLinks = () => {
 
-    const colorActive = '#ff7f2f';
+    // const colorActive = '#ff7f2f';
+    const {setStore} = useContext(ThemeContext);
 
-    const nameLinks = [
-        {
-            id: 1,
-            text: 'Sobre mí',
-            path: '#about'
-        }, {
-            id: 2,
-            text: 'Portafolio',
-            path: '#portfolio'
-        }, 
-        // {
-            // id: 3,
-            // text: 'Blog',
-            // path: '/#blog'
-        // }, 
-        // 
-        {
-            id: 4,
-            text: 'Contacto',
-            path: '/#contact'
-        }
-    ];
+
+    const handleActiveLink = (item) => {
+        setStore({linkActive: item})
+    }
 
     return (
+
         <> {
             nameLinks.map(({text, path, id}) => <div className="h-link"
                 key={id}>
-                <NavHashLink to={path}
-                onClick={linkActive}
-                    activeClassName="selected"
-                    smooth
-                    activeStyle={
-                        {color: colorActive}
-                }>
-                    {text}</NavHashLink>
+                <a href={path}
+                onClick={() =>handleActiveLink(id)}
+                //     activeClassName="selected"
+                //     smooth
+                //     activeStyle={
+                //         {color: colorActive}
+                // }
+                >
+                    {text}</a>
             </div>)
         } </>
     );

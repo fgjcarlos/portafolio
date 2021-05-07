@@ -4,17 +4,19 @@ import listProyects from 'container/listProyects.json';
 
 const Portfolio = () => {
 
-    return (
-        <div className="p-container">
+   return (
 
-            <h2>Proyectos personales</h2>
-            <div className="p-proyects">
-                {
-                listProyects.map((proyect) => 
-                <Card key={proyect.id} proyect={proyect}/>)
-            } </div>
+            <div className="p-container">
+                <h2>Proyectos personales</h2>
+                <div className="p-proyects">
+                    {
+                    listProyects.map((proyect) => <Card key={
+                            proyect.id
+                        }
+                        proyect={proyect}/>)
+                } </div>
+            </div>
 
-        </div>
     );
 }
 

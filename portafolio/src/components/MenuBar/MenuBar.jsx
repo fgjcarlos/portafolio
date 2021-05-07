@@ -2,30 +2,34 @@ import {useContext, useEffect, useRef, useState} from 'react';
 import './menuBar.css';
 import MenuLinks from 'components/MenuLinks/MenuLinks';
 import useOutsideAlerter from 'hooks/useOutsideAlerter';
-import HeaderContext from 'context/headerContext';
+import ThemeContext from 'context/themeContext';
 
-export const MenuBarDesktop = ({linkActive}) => {
+export const MenuBarDesktop = () => {
 
-    return (<div className={
-        'h-links' 
-    }>
-        <MenuLinks linkActive={linkActive}/>
+    return (
+        <div className={'h-links'}>
+            <MenuLinks/>
 
-    </div>);
+        </div>
+    );
 }
 
 export const MenuBarDevice = () => {
 
     const [showMenu, setShowMenu] = useState(false);
-    const {setHeaderBackColor} = useContext(HeaderContext);
+    const {store, setStore} = useContext(ThemeContext);
 
     // Ref for hide menu if clicked outside
     const wrapperRef = useRef(null);
-    const {isClicked} =  useOutsideAlerter(wrapperRef);
+    const {isClicked} = useOutsideAlerter(wrapperRef);
 
-    useEffect(() =>{
-        setHeaderBackColor(showMenu);
-    },[setHeaderBackColor,showMenu]);
+    useEffect(() => {
+        setStore({headerBackColor: showMenu});
+    }, [setStore, showMenu]);
+
+    useEffect(() => {
+        setShowMenu(false);
+    }, [store.linkActive]);
 
     const handleShowMenuHam = () => {
         setShowMenu(!showMenu);
@@ -34,12 +38,15 @@ export const MenuBarDevice = () => {
     // Hide menu
     isClicked && showMenu && handleShowMenuHam();
 
-    return (<div className="h-menuDevice"> {/* icon menu hamburguer */}
-        <div id="btnHam"
-            onClick={handleShowMenuHam}></div>
-        {
-        showMenu && <div ref={wrapperRef}>
-            <MenuBarDesktop linkActive={handleShowMenuHam} />
-        </div>
-    } </div>);
+    return (
+        <div className="h-menuDevice">
+            {/* icon menu hamburguer */}
+            <div id="btnHam"
+                onClick={handleShowMenuHam}></div>
+            {
+            showMenu && <div ref={wrapperRef}>
+                <MenuBarDesktop/>
+            </div>
+        } </div>
+    );
 }
