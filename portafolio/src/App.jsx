@@ -1,6 +1,5 @@
 import {Route, Switch} from "react-router-dom";
 import 'App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
 import Root from "Pages/Root/Root";
 import { ThemeContextProvider } from "context/themeContext";
 
