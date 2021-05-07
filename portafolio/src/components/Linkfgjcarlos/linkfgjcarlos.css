@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap'); */
 
 .linkHome a{
-    font-family: 'Monoton', cursive, serif;
+    font-family: 'Bangers', serif;
     text-align: left;
     font-size: 1.6rem;
     color: var(--colorV);

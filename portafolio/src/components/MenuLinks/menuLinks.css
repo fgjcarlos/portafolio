@@ -1,4 +1,9 @@
-.h-link, .h-link > a  {
+.h-link{
+    font-family: 'Bangers', serif;
+    padding: 15px;
+}
+
+.h-link > a  {
     padding: 5px;
     margin: 5px;
     color: var(--colorV);
