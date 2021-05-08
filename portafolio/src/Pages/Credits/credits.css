@@ -31,3 +31,9 @@ text-decoration: none;
 .credits-container a:hover{
     color: var(--colorI);
 }
+
+@media screen and (max-width: 576px)  {
+    .credits-container img {
+        width: 250px;
+    }
+}
