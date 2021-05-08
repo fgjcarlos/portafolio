@@ -6,7 +6,7 @@ const Linkfgjcarlos = ({customStyle}) => {
         <div className={
             'linkHome ' + customStyle
         }>
-            <a href='#landing'>
+            <a href='/#landing'>
                 FGJCARLOS
             </a>
         </div>

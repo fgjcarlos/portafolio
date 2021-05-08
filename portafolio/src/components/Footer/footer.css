@@ -11,6 +11,8 @@
 
 #f-credit {
     margin-left: 20px;
+    color: var(--colorVII);
+    text-decoration: none;
 }
 
 #f-credit:hover{

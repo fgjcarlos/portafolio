@@ -1,0 +1,33 @@
+.credits-container{
+    position: relative;
+    margin: 0px;
+    scroll-margin-top: 60px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.credits-container h2 {
+    margin: 40px 0px 40px 0px;
+    text-align: center;
+}
+
+.credits-container img {
+    width: 400px;
+    align-self: center;
+}
+
+.credits-container ul{
+list-style: trad-chinese-formal;
+margin-top: 0px;
+}
+
+.credits-container a{
+color: black;
+font-weight: bold;
+text-decoration: none;
+}
+
+.credits-container a:hover{
+    color: var(--colorI);
+}

@@ -4,7 +4,12 @@ const ThemeContext = createContext({});
 
 export const ThemeContextProvider = ({children}) => {
 
-    const [store, setStore] = useState({headerBackColor: false, linkActive: undefined});
+    const [store, setStore] = useState({
+        headerBackColor: false, 
+        linkActive: undefined,
+        isLandinInView: false
+        
+    });
 
     return (<ThemeContext.Provider value={
         {store, setStore}

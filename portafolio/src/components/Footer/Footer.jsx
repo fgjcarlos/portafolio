@@ -1,6 +1,7 @@
 import './footer.css';
 import MenuLinks from 'components/MenuLinks/MenuLinks';
 import Linkfgjcarlos from 'components//Linkfgjcarlos/Linkfgjcarlos';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 
@@ -13,7 +14,7 @@ const Footer = () => {
             <div className="f-nameDescription">
 
                 <span>Carlos Fontán - Desarrollador web</span>
-                <span id="f-credit">© Creditos de la web</span>
+                <Link to="/credits" id="f-credit">© Creditos de la web</Link>
 
             </div>
         </div>

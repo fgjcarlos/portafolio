@@ -5,14 +5,16 @@ import './header.css';
 import { useContext } from 'react';
 import ThemeContext from 'context/themeContext';
 
-const Header = ({landingStyle}) => {
+const Header = () => {
 
     const {store} = useContext(ThemeContext);
     const isDesktopOrLaptop = useMediaQuery({query: '(min-device-width: 768px)'});
     const darkHeader = store.headerBackColor ? 'h-DarkColorHeader' : '';
 
+    const landinHeader = (store && store.isLandinInView) ? 'h-landing' : '';
+
     return (
-        <div className={`h-container ${landingStyle} ${darkHeader}`}>
+        <div className={`h-container ${landinHeader} ${darkHeader}`}>
 
             <Linkfgjcarlos customStyle={''}/>
 

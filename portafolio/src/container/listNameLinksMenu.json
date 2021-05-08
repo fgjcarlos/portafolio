@@ -2,18 +2,18 @@
     {
         "id": "about",
         "text": "Sobre mí",
-        "path": "#about"
+        "path": "/#about"
     }, 
     
     {
         "id": "portfolio",
         "text": "Portafolio",
-        "path": "#portfolio"
+        "path": "/#portfolio"
     }, 
 
     {
         "id": "contact",
         "text": "Contacto",
-        "path": "#contact"
+        "path": "/#contact"
     }
 ]
