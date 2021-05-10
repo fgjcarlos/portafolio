@@ -5,11 +5,11 @@ import { useInView } from "react-intersection-observer";
 export const useLandingInView = () => {
 
     const {setStore} = useContext(ThemeContext);
-    const {ref, inView} = useInView({threshold: 0, rootMargin: '-100px'});
+    const {ref, inView, entry = false} = useInView({threshold: 0, rootMargin: '-100px'});
 
     useEffect(() => {
-        setStore({isLandinInView: inView});
-    }, [inView,setStore]);
+        entry && setStore(prev =>({...prev,isLandingInView: entry.isIntersecting}));
+    }, [entry.isIntersecting, entry, setStore]);
 
-    return [ref];
+    return [ref,inView,entry];
 }

@@ -8,7 +8,7 @@ const MenuLinks = () => {
     const {setStore} = useContext(ThemeContext);
 
     const handleActiveLink = (item) => {
-        setStore({linkActive: item})
+        setStore(prev => ({...prev,linkActive: item}));
     }
 
     return (

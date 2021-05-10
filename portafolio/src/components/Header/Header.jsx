@@ -1,20 +1,16 @@
 import {useMediaQuery} from 'react-responsive';
 import {MenuBarDesktop, MenuBarDevice} from 'components/MenuBar/MenuBar';
 import Linkfgjcarlos from 'components/Linkfgjcarlos/Linkfgjcarlos';
+import {useStateHeader} from 'hooks/useStateHeader';
 import './header.css';
-import { useContext } from 'react';
-import ThemeContext from 'context/themeContext';
 
 const Header = () => {
 
-    const {store} = useContext(ThemeContext);
+    const [darkHeader, landingHeader] = useStateHeader();
     const isDesktopOrLaptop = useMediaQuery({query: '(min-device-width: 768px)'});
-    const darkHeader = store.headerBackColor ? 'h-DarkColorHeader' : '';
-
-    const landinHeader = (store && store.isLandinInView) ? 'h-landing' : '';
 
     return (
-        <div className={`h-container ${landinHeader} ${darkHeader}`}>
+        <div className={`h-container ${landingHeader} ${darkHeader}`}>
 
             <Linkfgjcarlos customStyle={''}/>
 

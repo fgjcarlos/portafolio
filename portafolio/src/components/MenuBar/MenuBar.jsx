@@ -1,8 +1,7 @@
-import {useContext, useEffect, useRef, useState} from 'react';
+import { useRef} from 'react';
 import './menuBar.css';
 import MenuLinks from 'components/MenuLinks/MenuLinks';
-import useOutsideAlerter from 'hooks/useOutsideAlerter';
-import ThemeContext from 'context/themeContext';
+import {useStateMenuDevice} from 'hooks/useStateMenuDevice';
 
 export const MenuBarDesktop = () => {
 
@@ -16,35 +15,21 @@ export const MenuBarDesktop = () => {
 
 export const MenuBarDevice = () => {
 
-    const [showMenu, setShowMenu] = useState(false);
-    const {store, setStore} = useContext(ThemeContext);
-
     // Ref for hide menu if clicked outside
     const wrapperRef = useRef(null);
-    const {isClicked} = useOutsideAlerter(wrapperRef);
-
-    useEffect(() => {
-        setStore({headerBackColor: showMenu});
-    }, [setStore, showMenu]);
-
-    useEffect(() => {
-        setShowMenu(false);
-    }, [store.linkActive]);
+    const [showMenu, setShowMenu] = useStateMenuDevice(wrapperRef);
 
     const handleShowMenuHam = () => {
-        setShowMenu(!showMenu);
+        setShowMenu(!showMenu);        
     }
 
-    // Hide menu
-    isClicked && showMenu && handleShowMenuHam();
-
     return (
-        <div className="h-menuDevice">
+        <div className="h-menuDevice" ref={wrapperRef}>
             {/* icon menu hamburguer */}
             <div id="btnHam"
                 onClick={handleShowMenuHam}></div>
             {
-            showMenu && <div ref={wrapperRef}>
+            showMenu && <div >
                 <MenuBarDesktop/>
             </div>
         } </div>

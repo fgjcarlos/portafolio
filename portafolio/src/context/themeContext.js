@@ -7,7 +7,7 @@ export const ThemeContextProvider = ({children}) => {
     const [store, setStore] = useState({
         headerBackColor: false, 
         linkActive: undefined,
-        isLandinInView: false
+        isLandingInView: false
         
     });
 
