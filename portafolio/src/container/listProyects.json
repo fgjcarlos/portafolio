@@ -7,6 +7,15 @@
         "description": "Web personal, para compartir mis proyectos y aficiones",
         "linkGit": "https://github.com/fgjcarlos/portafolio",
         "linkDemo": ""
+    },
+    {
+        "image": "generatorPass.jpg",
+        "id": "generator",
+        "title": "Generador de contraseñas",
+        "techs": ["React", "HTML", "CSS", "JS"],
+        "description": "Generador de contraseñas",
+        "linkGit": "https://github.com/fgjcarlos/password-generator.git",
+        "linkDemo": "https://generatorpass.fgjcarlos.com/"
     }
 
 ]
